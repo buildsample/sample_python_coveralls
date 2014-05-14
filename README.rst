@@ -13,14 +13,14 @@ Works with python 2.6+, 3.2+ and pypy 1.9.
 .. _nice features: https://coveralls.io/info/features
 .. _official gem: https://coveralls.io/docs/ruby
 
-Usage (Travis CI)
+Usage (Made this work using shippable.yml)
 -----------------
 
 This library will publish your coverage results on coveralls.io for everyone to see (unless you're using pro account).
-This package can possibly work with different CI environments, but it's only tested to work with `Travis CI`_ atm.
+This package can possibly work with different CI environments, but it's only tested to work with `Shippable`_ atm.
 
 1. First, log in via Github and `add your repo`_ on Coveralls website.
-2. Add ``pip install coveralls`` to ``install`` section of ``.travis.yml``
+2. Add ``pip install coveralls`` to ``install`` section of ``shippable.yml``
 3. Make sure you run your tests with coverage during the build in ``script`` part. Example::
 
     # --source specifies what packages to cover, you probably want to use that option
@@ -37,7 +37,7 @@ This package can possibly work with different CI environments, but it's only tes
     after_success:
       coveralls
 
-Full example of .travis.yml::
+Full example of shippable.yml::
 
     language: python
     python:
@@ -50,24 +50,6 @@ Full example of .travis.yml::
       coverage run --source=moscowdjango,meetup manage.py test
     after_success:
       coveralls
-
-Usage (another CI)
-~~~~~~~~~~~~~~~~~~
-
-If you're NOT using Travis, first option is to provide a ``repo_token`` option in ``.coveralls.yml``
-at the root of your repo. This is your own secret token, which is available at the bottom of your repository's page on Coveralls.
-Make sure it stays **secret**, do not put it in your public repo.
-
-Example of .coveralls.yml::
-
-    # .coveralls.yml
-    repo_token: TjkDuVpGjuQcRhNW8dots9c8SSnv7ReM5
-
-Another alternative is to use ``COVERALLS_REPO_TOKEN`` env variable.
-
-.. _add your repo: https://coveralls.io/repos/new
-.. _Travis CI: http://travis-ci.org
-
 
 Nosetests
 ~~~~~~~~~
