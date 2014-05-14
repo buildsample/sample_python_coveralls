@@ -10,8 +10,7 @@ install:
 before_script: mkdir -p shippable/codecoverage shippable/testresults
 script:
   - coverage run --source=coveralls setup.py test
-  - coverage xml -o shippable/codecoverage/coverage.xml setup.py test
-  - coverage report -m
+  - coverage xml -o shippable/codecoverage/coverage.xml setup.py
   
 after_script:
   coveralls --verbose
