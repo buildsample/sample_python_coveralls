@@ -1,3 +1,4 @@
+I have modified this repo to build using Shippable.yml.
 Coveralls for python
 ====================
 
@@ -7,7 +8,7 @@ This package provides seamless integration with ``coverage.py`` in your python p
 For ruby projects, there is an `official gem`_.
 Only projects hosted on Github are supported.
 
-Works with python 2.6+, 3.2+ and pypy 1.9.
+Works with python 2.6+ and 3.2+.
 
 .. _Coveralls.io: http://coveralls.io
 .. _nice features: https://coveralls.io/info/features
