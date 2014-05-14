@@ -1,10 +1,8 @@
-===========
-I have modified this repo to build using Shippable.yml.
-===============
 
 Coveralls for python
 ====================
 
+I have modified this repo to build using Shippable.yml.
 
 `Coveralls.io`_ is service to publish your coverage stats online with a lot of `nice features`_.
 This package provides seamless integration with ``coverage.py`` in your python projects.
