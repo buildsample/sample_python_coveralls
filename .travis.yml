@@ -7,6 +7,7 @@ python:
   - pypy
 install:
   python setup.py develop
+before_script: mkdir -p shippable/codecoverage shippable/testresults
 script:
   - coverage run --source=coveralls setup.py test
   - coverage xml -o shippable/codecoverage/coverage.xml setup.py
