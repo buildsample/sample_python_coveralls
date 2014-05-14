@@ -9,6 +9,8 @@ install:
   python setup.py develop
 script:
   - coverage run --source=coveralls setup.py test
+  - coverage xml -o shippable/codecoverage/coverage.xml setup.py
   - coverage report -m
+  
 after_script:
   coveralls --verbose
